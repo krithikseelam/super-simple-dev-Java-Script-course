@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>9c</title>
+</head>
+<body>
+  <button class="js-heads-button" onclick="
+    displayResult('heads');
+  ">heads</button>
+  <button class="js-tails-button" onclick="
+    displayResult('tails');
+  ">tails</button>
+  <p class="js-result"></p>
+  <script>
+    function displayResult(playerChosen){
+      document.querySelector('.js-result').innerHTML = `You chose: ${playerChosen}`;
+    }
+  </script>
+</body>
+</html>

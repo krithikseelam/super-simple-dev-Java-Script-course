@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>7f</title>
+</head>
+<body>
+  <script>
+    function convertTemperature(degree,unit){
+      if(unit === 'C'){
+        let farenheit = (degree*9/5) + 32;
+        return farenheit;
+      } else if (unit === 'F'){
+        let celsius = (degree - 32)*5/9;
+        return celsius;
+      }
+    }
+    console.log(convertTemperature(25,'C'));
+
+  </script>
+</body>
+</html>
