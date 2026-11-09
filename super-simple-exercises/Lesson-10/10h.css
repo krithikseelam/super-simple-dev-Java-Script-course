@@ -1,0 +1,25 @@
+body{
+  font-family: Arial;
+}
+
+.error{
+  color: red;
+}
+
+.textbox{
+  font-size: 20px;
+  padding: 10px 15px;
+}
+
+.calculate-button{
+  font-size: 20px;
+  padding: 12px 15px;
+  color: white;
+  background-color: green;
+  border: none;
+}
+
+.display-price{
+  font-size: 18px;
+  padding-left: 6px;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Projects</title>
+  <style>
+    body{
+      font-family: Arial;
+    }
+
+    .subscribe-button{
+      border: none;
+      color: white;
+      background-color: black;padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-bottom: 30px;
+    }
+
+    .is-subscribed{
+      background-color: rgb(240, 240, 240);
+      color: black;
+    }
+
+    .cost-input{
+      font-size: 15px;
+      padding: 10px;
+      
+    }
+
+    .calculate-button{
+      background-color: green;
+      color: white;
+      border: none;
+      font-size: 15px;
+      padding: 12px 15px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <p>YouTube Subscribe Button</p>
+  <button onclick="
+    subscribe();
+  " class="js-subscribe-button subscribe-button">
+    Subscribe
+  </button>
+
+  <p>Amazon Shipping Calculator</p>
+  <input type="text" placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="
+    hadelCostKeyDown(event); // event only exist in onkeydown so we are using placeholder to pass it to the function
+  ">
+  <button onclick="
+    claculateTotal();
+  " class="calculate-button">Calculate</button>
+
+  <p class="js-total-cost"></p>
+
+  <script>
+    String(25)
+    console.log('25' - 5); // when a string only contains a number and we do -*/ it converts the string to a number
+    console.log('25' + 5); // its not the same for the + operator so we always use Number() and String() functions while doing maths
+
+    //window represents a browser
+    window.document
+    window.console.log('window'); // same as console.log();
+    window.alert // but we dont need to type window everytime js automatically takes window.
+
+    function hadelCostKeyDown(event){
+      if(event.key === 'Enter'){
+        claculateTotal(); // event.key takes the key we enter in the input box
+      }
+    }
+
+    function claculateTotal(){
+      const inputElement = document.querySelector('.js-cost-input');
+      // for input elements we use .value to get text inside a text box
+      let cost = Number(inputElement.value); // value will be a string so we use a Number function
+      console.log(typeof cost);
+      
+      if(cost < 40){
+        cost += 10;
+        console.log(cost);
+      }
+
+      document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+    }
+
+    function subscribe(){
+      const buttonElement = document.querySelector('.js-subscribe-button');
+
+      if(buttonElement.innerText === 'Subscribe'){
+        buttonElement.innerHTML = 'Subscribed';
+        buttonElement.classList.add('is-subscribed'); // adds class called is-subscribed
+      } else{
+        buttonElement.innerHTML = 'Subscribe';
+        buttonElement.classList.remove('is-subscribed');
+      }
+    }
+  </script>
+</body>
+</html>

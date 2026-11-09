@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>10h</title>
+  <link rel="stylesheet" href="10h.css">
+</head>
+<body>
+  <input type="text" class="js-textbox textbox" placeholder="Price" onkeydown="
+    calculateTotalPriceKeyDown(event); 
+  ">
+  <button class="js-calculate-button calculate-button" onclick="
+    calculateTotalPrice();
+  ">
+    Calculate
+  </button>
+  <p class="display-price"></p>
+  <script src="10h.js"></script>
+</body>
+</html>

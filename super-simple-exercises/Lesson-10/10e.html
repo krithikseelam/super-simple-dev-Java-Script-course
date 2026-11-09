@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>10e</title>
+  <style>
+    .gaming-button,
+    .music-button,
+    .tech-button{
+      font-size: 24px;
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 13px 25px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .is-toggled{
+      color: black;
+      background-color: rgb(240 240 240);
+    }
+    
+  </style>
+</head>
+<body>
+  <button class="js-gaming-button gaming-button" onclick="
+    if(gamingButtonElement.classList.contains('is-toggled')){
+      gamingButtonElement.classList.remove('is-toggled');
+    }else{
+      gamingButtonElement.classList.add('is-toggled');
+    }
+  ">
+    Gaming
+  </button>
+  <button class="js-music-button music-button" onclick="
+    if(musicButtonElement.classList.contains('is-toggled')){
+      musicButtonElement.classList.remove('is-toggled');
+    }else{
+      musicButtonElement.classList.add('is-toggled');
+    }
+  ">
+    Music
+  </button>
+  <button class="js-tech-button tech-button" onclick="
+    if(techButtonElement.classList.contains('is-toggled')){
+      techButtonElement.classList.remove('is-toggled');
+    }else{
+      techButtonElement.classList.add('is-toggled');
+    }
+  ">
+    Tech
+  </button>
+  <script>
+    let gamingButtonElement = document.querySelector
+      ('.js-gaming-button');
+    let musicButtonElement = document.querySelector
+      ('.js-music-button');
+    let techButtonElement = document.querySelector
+      ('.js-tech-button');
+  </script>
+</body>
+</html>

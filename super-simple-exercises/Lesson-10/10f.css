@@ -1,0 +1,17 @@
+.gaming-button,
+.music-button,
+.tech-button{
+  font-size: 24px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.is-toggled{
+  color: black;
+  background-color: rgb(240 240 240);
+}
