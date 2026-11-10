@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>12h</title>
+</head>
+<body>
+  <button class="js-add-button" onclick="
+    addMessage(); 
+  ">Add</button>
+  <button class="js-remove-button" onclick="
+    removeMessage();
+  ">Remove</button>
+  <script>
+    let messages = 2;
+    setInterval(function(){
+      if(document.title === 'App'){
+        document.title = `(${messages}) New messages`;
+      }else {
+        document.title = 'App';
+      }
+    },1000);
+
+    function removeMessage(){
+      messages--;
+    }
+
+    function addMessage(){
+      messages++;
+    }
+  </script>
+</body>
+</html>

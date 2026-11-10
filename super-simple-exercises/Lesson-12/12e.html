@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>12e</title>
+</head>
+<body>
+  <button class="add-to-cart-button" onclick="
+    addToCart(); 
+  ">Add to cart</button>
+  <p class="add-to-cart-display"></p>
+  <script>
+    function addToCart(){
+      const display = document.querySelector('.add-to-cart-display');
+      display.innerHTML = 'Added';
+      setTimeout(function(){
+        display.innerHTML = '';
+      },2000);
+      
+    }
+  </script>
+</body>
+</html>
