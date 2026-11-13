@@ -11,7 +11,7 @@
     function displayFinished(){
       const button = document.querySelector('.start-button');
       button.innerHTML = 'Loading...';
-      setTimeout(function(){
+      setTimeout(() => {
         button.innerHTML = 'Finished!';
       },1000);
     }

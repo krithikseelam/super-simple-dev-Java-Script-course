@@ -7,16 +7,18 @@
 
     <script>
       const removeEgg = (array) => {
+        let remove_count = 2;
         return array.filter((value) => {
-          if(value != 'egg'){
-            return true;
-          }else{
+          if(value == 'egg' && remove_count > 0){
+            remove_count--;
             return false;
+          }else {
+            return true;
           }
         })
       }
       console.log(removeEgg(['egg','apple','egg','egg','chicken']));
-      // complete 12o
+      
     </script>
   </body>
 </html>

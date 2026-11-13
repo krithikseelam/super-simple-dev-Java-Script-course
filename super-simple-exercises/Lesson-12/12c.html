@@ -4,13 +4,14 @@
   <title>12c</title>
 </head>
 <body>
-  <button class="start-button" onclick="
-    displayFinished();
-  ">Start</button>
+  <button class="start-button">Start</button>
   <script>
+    const button = document.querySelector('.start-button');
+    button.addEventListener('click',() => {
+      displayFinished();
+    })
     function displayFinished(){
-      const button = document.querySelector('.start-button');
-      setTimeout(function(){
+      setTimeout(() => {
         button.innerHTML = 'Finished!';
       },1000);
     }
